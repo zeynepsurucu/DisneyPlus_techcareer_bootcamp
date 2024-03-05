@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context=".ui.fragment.MainFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/darkBlue"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="4dp"
+            android:src="@drawable/disney_logo" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb_main">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_child_of_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cl_child_of_scroll_view" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_banner">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/white_transparent"
+                    android:outlineSpotShadowColor="@color/white25"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cardView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageViewDisney"
+                        android:layout_width="50dp"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/white_disney_logo" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView5"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/white_transparent"
+                    android:outlineSpotShadowColor="@color/white25"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardView4"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_national_geographic"
+                        android:layout_width="50dp"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/national_geographic" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/white_transparent"
+                    android:outlineSpotShadowColor="@color/white25"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cardView5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardView3"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_star_wars"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/star_wars_logo" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/white_transparent"
+                    android:outlineSpotShadowColor="@color/white25"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cardView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardView"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_marvel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/marvel_logo" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/white_transparent"
+                    android:outlineSpotShadowColor="@color/white25"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardView2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView_pixar"
+                        android:layout_width="70dp"
+                        android:layout_height="58dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pixar_logo" />
+
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_oneriler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:letterSpacing="0.02"
+                android:text="Sana Özel Öneriler"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_card" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_oneriler" />
+
+            <TextView
+                android:id="@+id/tv_hit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:letterSpacing="0.02"
+                android:text="Hit Filmler"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_movies" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movies2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
